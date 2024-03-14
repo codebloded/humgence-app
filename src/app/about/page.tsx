@@ -40,15 +40,15 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 text-start md:text-start md:w-1/2">
         <h2 className="text-4xl font-light mb-8">Our Philosophy</h2>
         <p className="text-lg leading-relaxed">
-          "Anyone can do what's expected. It takes focused commitment and drive
+          "Anyone can do whats expected. It takes focused commitment and drive
           to reach beyond it. Good service is expected, but exceptional service
           is the Core way. We care not just about where you are now, but where
-          you're going. We ask good questions, and guide you through the
-          answers. We're warm and attentive, and there when you need us. Our
-          approach is the human, pick-up-the-phone kind that's remembered for
-          all the right reasons. A sale or a purchase is expected, but a
-          market-leading result that gets everyone talking is not. Our team is
-          well-connected, not just locally but all around the globe".
+          youre going. We ask good questions, and guide you through the answers.
+          Were warm and attentive, and there when you need us. Our approach is
+          the human, pick-up-the-phone kind thats remembered for all the right
+          reasons. A sale or a purchase is expected, but a market-leading result
+          that gets everyone talking is not. Our team is well-connected, not
+          just locally but all around the globe".
         </p>
       </div>
       <div className="container flex flex-row justify-between py-36 items-center gap-5 flex-wrap mx-auto px-4">
