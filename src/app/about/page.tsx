@@ -64,7 +64,7 @@ const AboutPage = () => {
         />
         <Card
           img="/3.jpg"
-          description="We navigate the property landscape and our local market with a level of assured ease and familiarity that’s only possible with years of experience and proven results."
+          description="We navigate the property landscape and our local market with a level of assured ease and familiarity thats only possible with years of experience and proven results."
           title="Project Marketing"
         />
       </div>

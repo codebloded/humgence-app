@@ -9,8 +9,10 @@ const Card: React.FC<{ img: string; description: string; title: string }> = ({
   return (
     <div className="card  w-96 bg-base-100 shadow-xl">
       <figure>
-        <img
+        <Image
           src={img}
+          width={300}
+          height={300}
           alt="Shoes"
           className="w-full h-64 object-cover rounded-t-lg"
         />
