@@ -1,36 +1,82 @@
+import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const Navbar: React.FC<{ isTransparent: boolean }> = ({ isTransparent }) => {
   return (
-    <header className="sticky top-0 z-10 bg-transparent">
-      <div className="p-4">
-        <nav className="flex items-center justify-around">
-          <div className="flex items-center space-x-4 text-white">
-            <a href="#" className="text-white hover:text-gray-300">
-              Sales
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Rentals
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Projects
-            </a>
+    <div
+      className={`navbar  fixed w-full z-10 top-0 ${
+        isTransparent ? "bg-transparent" : "bg-black"
+      } transition-colors duration-500 ease-in-out`}
+    >
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white font-semibold">HUMGANCE</p>
-            <p className="text-xs text-white font-semibold">REAL ESTATE</p>
-          </div>
-          <div className="flex items-center space-x-4 text-white">
-            <a href="#" className="text-white hover:text-gray-300">
-              About
-            </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              Contact
-            </a>
-          </div>
-        </nav>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a>Item 1</a>
+            </li>
+            <li>
+              <a>Parent</a>
+              <ul className="p-2">
+                <li>
+                  <a>Submenu 1</a>
+                </li>
+                <li>
+                  <a>Submenu 2</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a>Item 3</a>
+            </li>
+          </ul>
+        </div>
+        <ul className="menu menu-horizontal px-1 hidden lg:flex">
+          <li>
+            <a>Vision</a>
+          </li>
+          <li>
+            <a>Team and connect</a>
+          </li>
+
+          <li>
+            <a>Our Projects</a>
+          </li>
+        </ul>
       </div>
-    </header>
+      <div className="navbar-center lg:flex ">
+        <a className="btn btn-ghost text-center text-xl">REAL ESTATE</a>
+      </div>
+      <div className="navbar-end hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a>About Us</a>
+          </li>
+
+          <li>
+            <a>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 
