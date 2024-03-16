@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { ChakraProvider } from "@chakra-ui/react";
+
 import "./globals.css";
-import { Providers } from "./Provider";
 
 const poppins = Poppins({
 	subsets: ["latin"],
@@ -25,4 +26,8 @@ export default function RootLayout({
 			</Providers>
 		</html>
 	);
+}
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return <ChakraProvider>{children}</ChakraProvider>;
 }
