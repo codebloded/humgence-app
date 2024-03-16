@@ -111,7 +111,7 @@ export default function Home() {
           </section>
           <section className="bg-amber-50 text-black">
             <div className="container py-10 px-4 mx-auto flex flex-col items-center justify-center">
-              <h1 className="text-4xl lg:text-6xl text-center mb-10">
+              <h1 className="text-4xl lg:text-6xl w-3/6 text-center mb-10">
                 Get our highlights from each property
               </h1>
 
