@@ -77,12 +77,12 @@ export default function Home() {
               autoPlay
               loop
               muted
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 object-cover w-full h-full grayscale"
             >
               <source src="video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="hero-overlay bg-black opacity-70"></div>
+            <div className="hero-overlay bg-black opacity-50"></div>
             <div className="hero-content text-center"></div>
           </div>
 

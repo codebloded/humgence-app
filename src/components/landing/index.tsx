@@ -19,12 +19,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ show, setShow }) => {
     >
       <Image
         alt="YOYO"
-        src="/land.jpg"
+        src="/1.jpg"
         width={1920}
         height={1080}
         className="absolute inset-0 object-cover  h-full
         transition-opacity duration-500 ease-in-out
          filter brightness-50 grayscale-200 contrast-100 blur-2
+         grayscale
         "
       />
 
