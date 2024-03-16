@@ -88,13 +88,13 @@ export default function Home() {
 
           <section className="bg-amber-50 text-black">
             <div className="container py-20 mx-auto flex flex-col items-center justify-center">
-              <h1 className="text-xl p-4 text-center mb-10 lg:text-5xl">
+              <h1 className=" w-3/4 text-xl p-4 text-center mb-10 lg:text-5xl leading-loose">
                 Every property that we show has features and benefits that meet
                 every requirement and expectation, from a safe and comfortable
                 atmosphere.
               </h1>
 
-              <div className="bg-indigo-500 w-2/4 h-72 flex items-center justify-center">
+              <div className="bg-indigo-500 w-4/5 h-96 flex items-center justify-center">
                 <h1 className="text-2xl text-center text-white">
                   <PlayCircle size={70} />
                 </h1>
