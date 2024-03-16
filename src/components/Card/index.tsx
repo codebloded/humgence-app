@@ -8,6 +8,7 @@ import data from "./properties_data.json";
 import { Button, Tag, Text } from "@chakra-ui/react";
 import { CircleUser } from "lucide-react";
 import Filter from "./Filter";
+import DataOnDataPage from "./DataOnDataPage";
 
 type SizeFilter = {
 	min: number;
@@ -140,6 +141,7 @@ export function ThreeDCardDemo() {
 					</div>
 				)}
 			</div>
+			<DataOnDataPage />
 		</>
 	);
 }
