@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { ChakraProvider } from "@chakra-ui/react";
+
 import "./globals.css";
 
 const poppins = Poppins({
@@ -19,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
+}
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return <ChakraProvider>{children}</ChakraProvider>;
 }
