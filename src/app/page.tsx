@@ -7,6 +7,7 @@ import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
 import OurVisionPage from "./vision/page";
 import { motion } from "framer-motion";
+import { ThreeDCardDemo } from "@/components/Card";
 
 const Page = () => {
   return (
@@ -15,10 +16,9 @@ const Page = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* navbar */}
-      {/* <Navbar isTransparent={true} /> */}
       <Hero />
       <Para />
+      <ThreeDCardDemo />
       <Highlights />
       <Unlock />
       <AboutPage />
