@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ImageSlider = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
@@ -41,7 +42,7 @@ const ImageSlider = () => {
     right1: { x: "50%", scale: 0.7, zIndex: 3 },
   };
   return (
-    <div className="flex items-center flex-col justify-center  h-screen">
+    <div className="flex items-center flex-col justify-center w-3/4 h-screen">
       {images.map((image, index) => (
         <motion.img
           key={index}
@@ -55,19 +56,19 @@ const ImageSlider = () => {
           style={{ width: "40%", position: "absolute" }}
         />
       ))}
-      <div className="flex flex-row gap-3 justify-center mt-[400px]">
-        <button
-          className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
+      <div className="flex flex-row gap-40 justify-center mt-[700px]">
+        <ChevronLeft
+          size={54}
+          color="#000"
           onClick={handleBack}
-        >
-          Back
-        </button>
-        <button
-          className="text-white mt-[400px] bg-indigo-400 rounded-md py-2 px-4"
+          className=" shadow-lg bg-white rounded-full p-4 hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+        />
+        <ChevronRight
+          size={54}
+          color="#000"
+          className=" shadow-lg bg-white rounded-full p-4 hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
           onClick={handleNext}
-        >
-          Next
-        </button>
+        />
       </div>
     </div>
   );

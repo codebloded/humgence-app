@@ -12,7 +12,7 @@ export default function ContactPage() {
           <span className="font-bolder-500 text-[#5656b1]">Connect</span>
         </p>
 
-        <div className="w-full flex flex-col gap-10 md:flex-row">
+        <div className="w-full flex flex-col justify-between gap-10 md:flex-row">
           {/* Contact form */}
           <form className="w-full max-w-lg">
             <Input

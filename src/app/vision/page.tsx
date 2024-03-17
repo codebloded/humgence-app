@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import { SectionLayout } from "../../components/layouts/SectionLayout";
 import Image from "next/image";
 import { WhiteButton } from "@/components/common/buttons";
 import { Text } from "@chakra-ui/react";
+import { SwipeCarousel } from "@/components/carousals/SecondCarousal";
 
 const OurVisionPage = () => {
   return (
@@ -15,7 +17,9 @@ const OurVisionPage = () => {
           </p>
 
           <div className="w-full flex flex-col gap-10 ">
-            <div className="w-full aspect-video bg-purple-300">VIDEO</div>
+            <div className="w-full aspect-video bg-[#222226]">
+              <SwipeCarousel />
+            </div>
             <div className="flex flex-col gap-5 md:gap-20 ">
               <Text
                 noOfLines={{
