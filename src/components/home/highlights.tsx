@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { BedDouble, Cctv, MapPinned } from "lucide-react";
 import { SectionLayout } from "../layouts/SectionLayout";
 
@@ -25,6 +26,7 @@ export function Highlights() {
         "Each of our buildings is strategically situated in close proximity to city facilities, ensuring unparalleled convenience and accessibility for occupants.",
     },
   ];
+
   return (
     <SectionLayout
       bgColor={{
@@ -33,10 +35,20 @@ export function Highlights() {
       }}
     >
       <div className="text-[#222226] flex flex-col py-28 md:py-36 lg:py-44 items-center gap-20">
-        <p className="text-3xl md:text-6xl md:leading-[70px] lg:text-7xl lg:leading-[90px] xl:text-8xl xl:leading-[110px] font-semibold text-center">
+        <motion.p
+          className="text-3xl md:text-6xl md:leading-[70px] lg:text-7xl lg:leading-[90px] xl:text-8xl xl:leading-[110px] font-semibold text-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           Get our highlights <br /> from each property
-        </p>
-        <div className="flex flex-wrap gap-5 justify-center">
+        </motion.p>
+        <motion.div
+          className="flex flex-wrap gap-5 justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           {featuresConfig.map((feature, index) => {
             return (
               <Feature
@@ -47,7 +59,7 @@ export function Highlights() {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </SectionLayout>
   );
@@ -58,14 +70,33 @@ interface FeatureProps {
   title: string;
   description: string;
 }
+
 const Feature = ({ icon, title, description }: FeatureProps) => {
   return (
-    <div className="flex flex-col items-center max-w-sm w-full gap-5 p-10">
-      <div className="aspect-square h-28 p-8 bg-white rounded-full">{icon}</div>
-      <h3 className="text-center text-2xl md:text-3xl max-w-60 w-full text-[#222226]">
+    <motion.div
+      className="flex flex-col items-center max-w-sm w-full gap-5 p-10"
+      whileHover={{ scale: 1.1 }}
+    >
+      <motion.div
+        className="aspect-square h-28 p-8 bg-white rounded-full"
+        whileHover={{ rotate: 360 }}
+      >
+        {icon}
+      </motion.div>
+      <motion.h3
+        className="text-center text-2xl md:text-3xl max-w-60 w-full text-[#222226]"
+        whileHover={{ color: "#5656b1" }}
+      >
         {title}
-      </h3>
-      <p className="text-center text-[#666361]">{description}</p>
-    </div>
+      </motion.h3>
+      <motion.p
+        className="text-center text-[#666361]"
+        whileHover={{ color: "#5656b1" }}
+      >
+        {description}
+      </motion.p>
+    </motion.div>
   );
 };
+
+export default Highlights;

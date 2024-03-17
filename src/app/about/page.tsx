@@ -1,74 +1,145 @@
 "use client";
+import { motion } from "framer-motion";
 
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Card from "@/components/common/card";
+import GridCard from "@/components/about/grid-card";
+import { SectionLayout } from "@/components/layouts/SectionLayout";
 
 const AboutPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const scrollY = window.scrollY || window.pageYOffset;
-      const aboutSection = document.getElementById("about-section");
-      if (aboutSection) {
-        const aboutSectionTop = aboutSection.offsetTop;
-        setIsVisible(scrollY > aboutSectionTop - windowHeight / 2);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div
-      id="about-section"
-      className={`container mx-auto flex flex-col  flex-wrap md:flex-row justify-between items-center gap-4 py-36 px-4 transition-opacity duration-700 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+    <SectionLayout
+      bgColor={{
+        type: "hex",
+        value: "#f3ede6",
+      }}
     >
-      <Image
-        src="/land.jpg"
-        width={550}
-        height={550}
-        alt="about"
-        className="rounded-lg"
-      />
-
-      <div className="container mx-auto px-4 text-start md:text-start md:w-1/2">
-        <h2 className="text-4xl font-light mb-8">Our Philosophy</h2>
-        <p className="text-lg leading-relaxed">
-          "Anyone can do whats expected. It takes focused commitment and drive
-          to reach beyond it. Good service is expected, but exceptional service
-          is the Core way. We care not just about where you are now, but where
-          youre going. We ask good questions, and guide you through the answers.
-          Were warm and attentive, and there when you need us. Our approach is
-          the human, pick-up-the-phone kind thats remembered for all the right
-          reasons. A sale or a purchase is expected, but a market-leading result
-          that gets everyone talking is not. Our team is well-connected, not
-          just locally but all around the globe".
+      {/* Big heading with animation */}
+      <motion.div
+        className="text-[#222226] flex flex-col py-28 md:py-36 lg:py-44 items-center gap-20"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <p className="text-3xl md:text-6xl md:leading-[70px] lg:text-7xl lg:leading-[90px] xl:text-8xl xl:leading-[110px] font-semibold text-start">
+          Pioneering{" "}
+          <span className="font-bolder-500 text-[#5656b1]">Helping</span>{" "}
+          <span className="font-bold ">in the digital world.</span>
         </p>
-      </div>
-      <div className="container flex flex-row justify-between py-36 items-center gap-5 flex-wrap mx-auto px-4">
-        <Card
-          img="/1.jpg"
-          description="Guiding you through every step of the process with care and precision, sharing insights and knowledge to help you arrive at every decision with ease and confidence."
-          title="Residential Sales & Leasing"
-        />
-        <Card
-          img="/2.jpg"
-          title="Commercial Sales & Leasing"
-          description="We work with you to design the best approach for your property and then we leverage our expertise, networks and market knowledge to achieve your property goals."
-        />
-        <Card
-          img="/3.jpg"
-          description="We navigate the property landscape and our local market with a level of assured ease and familiarity thats only possible with years of experience and proven results."
-          title="Project Marketing"
-        />
-      </div>
-    </div>
+
+        {/* First content section with animation */}
+        <motion.div
+          className="w-full flex flex-col items-center md:flex-row item-center justify-center gap-10"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <p className="text-xs sm:text-sm md:text-xl w-full md:w-[50%]">
+            <h3 className=" text-3xl lg:text-5xl font-bold my-10 md:text-3xl max-w-60 w-full text-[#222226]">
+              About US
+            </h3>
+            Embark on the journey to your ideal living space with our exclusive
+            real estate offerings. From urban retreats to countryside estates,
+            unlock the door to your dream home today. Explore listings, schedule
+            a viewing, and speak to our experts to turn your vision into
+            reality.
+          </p>
+          <div className="w-full md:w-[50%]">
+            <Image
+              src="/11.jpg"
+              width={500}
+              height={500}
+              alt="78"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
+
+        {/* Divider with animation */}
+        <motion.div
+          className="w-full max-w-4xl mx-auto border-t border-gray-900"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        ></motion.div>
+
+        {/* Second content section with animation */}
+        <motion.div
+          className="w-full flex flex-col items-center md:flex-row item-center justify-center gap-10"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <div className="w-full md:w-[50%]">
+            <Image
+              src="/3.jpg"
+              width={500}
+              height={500}
+              alt="78"
+              className="object-cover"
+            />
+          </div>
+          <p className="text-xs sm:text-sm md:text-xl w-full md:w-[50%]">
+            Embark on the journey to your ideal living space with our exclusive
+            real estate offerings. From urban retreats to countryside estates,
+            unlock the door to your dream home today. Explore listings, schedule
+            a viewing, and speak to our experts to turn your vision into
+            reality.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="w-full max-w-4xl mx-auto border-t border-gray-900"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        ></motion.div>
+
+        {/* Grid of 3 on mobile show 1 with animation */}
+
+        {/* Our Services Heading */}
+        <motion.p
+          className="text-3xl md:text-6xl md:leading-[70px] lg:text-7xl lg:leading-[90px] xl:text-8xl xl:leading-[110px] font-semibold text-start"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.4 }}
+        >
+          Our Services
+        </motion.p>
+
+        {/* Grid of Cards */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.6, staggerChildren: 0.2 }} // Stagger animation of children
+        >
+          <GridCard
+            img="/1.jpg"
+            title="Residential Sales & Leasing"
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
+          dolores asperiores unde voluptatum possimus non recusandae, rerum,
+          omnis labore quam error voluptatem magni incidunt libero! Enim odit
+          expedita harum ad."
+          />
+          <GridCard
+            img="/11.jpg"
+            title="Commercial Sales & Leasing"
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
+          dolores asperiores unde voluptatum possimus non recusandae, rerum,
+          omnis labore quam error voluptatem magni incidunt libero! Enim odit
+          expedita harum ad."
+          />
+          <GridCard
+            img="/3.jpg"
+            title="Project Marketing"
+            description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
+          dolores asperiores unde voluptatum possimus non recusandae, rerum,
+          omnis labore quam error voluptatem magni incidunt libero! Enim odit
+          expedita harum ad."
+          />
+        </motion.div>
+      </motion.div>
+    </SectionLayout>
   );
 };
 
