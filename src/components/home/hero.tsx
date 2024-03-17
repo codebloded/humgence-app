@@ -34,7 +34,7 @@ export function Hero() {
               Invest
             </span>
             <span
-              className="text-[#ffdf00]"
+              className="text-[#f3ede6]"
               style={{ display: "inline-block" }}
             >
               in

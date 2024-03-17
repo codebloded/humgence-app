@@ -34,9 +34,9 @@ const AboutPage = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <p className="text-xs sm:text-sm md:text-xl w-full md:w-[50%]">
-            <h3 className=" text-3xl lg:text-5xl font-bold my-10 md:text-3xl max-w-60 w-full text-[#222226]">
+            {/* <span className=" text-3xl lg:text-5xl font-bold my-10 md:text-3xl max-w-60 w-full text-[#222226]">
               About US
-            </h3>
+            </span> */}
             Embark on the journey to your ideal living space with our exclusive
             real estate offerings. From urban retreats to countryside estates,
             unlock the door to your dream home today. Explore listings, schedule
