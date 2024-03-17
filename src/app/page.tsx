@@ -7,26 +7,30 @@ import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
 import OurVisionPage from "./vision/page";
 import { motion } from "framer-motion";
+import ImageSlider from "@/components/carousals/ImageSlider";
+import { SwipeCarousel } from "@/components/carousals/SecondCarousal";
 
 const Page = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      {/* navbar */}
-      {/* <Navbar isTransparent={true} /> */}
-      <Hero />
-      <Para />
-      <Highlights />
-      <Unlock />
-      <AboutPage />
-      {/* <OurVisionPage /> */}
-      <ContactPage />
-      <Footer />
-    </motion.div>
-  );
+	return (
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+		>
+			{/* navbar */}
+			{/* <Navbar isTransparent={true} /> */}
+			<Hero />
+			<Para />
+			<Highlights />
+			<Unlock />
+			<AboutPage />
+			{/* <OurVisionPage /> */}
+			<ImageSlider />
+			<SwipeCarousel />
+			<ContactPage />
+			<Footer />
+		</motion.div>
+	);
 };
 
 export default Page;
