@@ -38,26 +38,70 @@ const Page = () => {
     };
   }, []);
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      {/* navbar */}
+    <div>
+      {show ? (
+        <LandingPage show={show} setShow={setShow} />
+      ) : (
+        <div>
+          <Navbar isTransparent={isTransparent} />
 
-      <Hero />
-      <Para />
+          <Hero />
+          <Para />
 
-      <Highlights />
-      <Unlock />
-      <AboutPage />
-      <ProjectPage />
-      {/* <OurVisionPage /> */}
+          <div className="container mx-auto flex flex-col items-center justify-center py-20">
+            <AboutPage />
+            <section className="bg-white text-black">
+              <div className="container py-10 px-4 mx-auto flex flex-col items-center gap-10 justify-between lg:flex-row lg:items-center lg:justify-center">
+                <div className="lg:w-2/5 lg:mr-10">
+                  <Image
+                    src="/land.jpg"
+                    //rectangle image
+                    width={250}
+                    height={550}
+                    alt="about"
+                    className="w-full filter grayscale aspect-square"
+                  />
+                </div>
+                <div className="lg:w-1/3 lg:ml-10 text-start lg:text-start">
+                  <h2 className="text-xl font-light mb-4 lg:mb-8">
+                    Beyond that expected
+                  </h2>
+                  {/* divide the a big paragraph into three lines */}
+                  <div className="flex flex-col gap-6 lg:gap-10 w-full lg:w-3/4 items-center lg:items-start justify-center lg:justify-start text-black">
+                    <p className="text-sm leading-relaxed">
+                      Were forward-thinking, highly experienced real estate
+                      agents representing premium properties in some of
+                      Melbournes finest inner-city neighbourhoods.
+                    </p>
+                    <p className="text-sm leading-relaxed">
+                      We navigate the property landscape and our local market
+                      with a level of assured ease and familiarity that’s only
+                      possible with years of experience and proven results.
+                    </p>
+                    <p className="text-sm leading-relaxed">
+                      What we do isn’t simply a job, it’s a lifestyle. For our
+                      clients, we’re always one step ahead, and over-delivery is
+                      our standard.
+                    </p>
+                    <p className="text-sm leading-relaxed">
+                      All for an experience and end result that goes beyond the
+                      expected.
+                    </p>
+                    {/* sharp button */}
+                    <button className="bg-black text-white px-4 py-2">
+                      Learn more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-      <SwipeCarousel />
-      <ContactPage />
-      <Footer />
-    </motion.div>
+            <section className="bg-white text-black"></section>
+          </div>
+          <Footer />
+        </div>
+      )}
+    </div>
   );
 };
 
