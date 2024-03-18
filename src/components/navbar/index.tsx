@@ -5,8 +5,8 @@ import React from "react";
 const Navbar: React.FC<{ isTransparent: boolean }> = ({ isTransparent }) => {
   return (
     <div
-      className={`navbar  fixed w-full z-10 top-0 ${
-        isTransparent ? "bg-transparent" : "bg-black"
+      className={`navbar text-[#f3ede6] fixed w-full z-10 top-0 ${
+        isTransparent ? "bg-transparent" : "bg-[#f3ede6] shadow-md"
       } transition-colors duration-500 ease-in-out`}
     >
       <div className="navbar-start">
