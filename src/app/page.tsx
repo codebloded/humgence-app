@@ -69,7 +69,7 @@ export default function Home() {
       {show ? (
         <LandingPage show={show} setShow={setShow} />
       ) : (
-        <Fragment>
+        <div>
           <Navbar isTransparent={isTransparent} />
 
           <div id="hero-section" className="relative hero min-h-screen w-full">
@@ -86,83 +86,58 @@ export default function Home() {
             <div className="hero-content text-center"></div>
           </div>
 
-          <section className="bg-amber-50 text-black">
-            <div className="container py-20 mx-auto flex flex-col items-center justify-center">
-              <h1 className=" w-3/4 text-xl p-4 text-center mb-10 lg:text-5xl leading-loose">
-                Every property that we show has features and benefits that meet
-                every requirement and expectation, from a safe and comfortable
-                atmosphere.
-              </h1>
-
-              <div className="bg-indigo-500 w-4/5 h-96 flex items-center justify-center">
-                <h1 className="text-2xl text-center text-white">
-                  <PlayCircle size={70} />
-                </h1>
-              </div>
-
-              {/* <div className="bg-amber-50 w-96 h-60 relative bottom-40 left-96 border border-black item-center justify-center">
-      <div className="flex flex-row justify-center items-center">
-        <h3 className="text-sm">
-          We prioritize elements that contribute to a safe and comfortable atmosphere. Whether you're seeking a serene escape or a vibrant urban setting, our properties are tailored to accommodate various preferences.
-        </h3>
-      </div>
-    </div> */}
-            </div>
-          </section>
-          <section className="bg-amber-50 text-black">
-            <div className="container py-10 px-4 mx-auto flex flex-col items-center justify-center">
-              <h1 className="text-4xl lg:text-6xl w-3/6 text-center mb-10">
-                Get our highlights from each property
-              </h1>
-
-              <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-8">
-                <div className="flex flex-col items-center justify-center p-5 max-w-xs lg:max-w-md gap-5">
-                  <LockIcon
-                    size={70}
-                    className="bg-white rounded-full p-4 mb-4"
+          <div className="container mx-auto flex flex-col items-center justify-center py-20">
+            <AboutPage />
+            <section className="bg-white text-black">
+              <div className="container py-10 px-4 mx-auto flex flex-col items-center gap-10 justify-between lg:flex-row lg:items-center lg:justify-center">
+                <div className="lg:w-2/5 lg:mr-10">
+                  <Image
+                    src="/land.jpg"
+                    //rectangle image
+                    width={250}
+                    height={550}
+                    alt="about"
+                    className="w-full filter grayscale aspect-square"
                   />
-                  <h3 className="text-2xl lg:text-3xl text-center">
-                    Security <br /> Guaranteed
-                  </h3>
-                  <p className="text-sm lg:text-base text-center">
-                    Ensuring the safety of every property is paramount, and to
-                    achieve this goal, we are implementing a comprehensive array
-                    of state-of-the-art security technologies.
-                  </p>
                 </div>
-                <div className="flex flex-col items-center justify-center p-5 max-w-xs lg:max-w-md gap-5">
-                  <Bed size={70} className="bg-white rounded-full p-4 mb-4" />
-                  <h3 className="text-2xl lg:text-3xl text-center">
-                    Complete <br /> Facilities
-                  </h3>
-                  <p className="text-sm lg:text-base text-center">
-                    We stand prepared to showcase an extensive array of
-                    facilities meticulously designed to cater to and enhance the
-                    fulfillment of your diverse needs and activities.
-                  </p>
-                </div>
-                <div className="flex flex-col items-center justify-center p-5 max-w-xs lg:max-w-md gap-5">
-                  <MapIcon
-                    size={70}
-                    className="bg-white rounded-full p-4 mb-4"
-                  />
-                  <h3 className="text-2xl lg:text-3xl text-center">
-                    Strategic <br /> Location
-                  </h3>
-                  <p className="text-sm lg:text-base text-center">
-                    Each of our buildings is strategically situated in close
-                    proximity to city facilities, ensuring unparalleled
-                    convenience and accessibility for occupants.
-                  </p>
+                <div className="lg:w-1/3 lg:ml-10 text-start lg:text-start">
+                  <h2 className="text-xl font-light mb-4 lg:mb-8">
+                    Beyond that expected
+                  </h2>
+                  {/* divide the a big paragraph into three lines */}
+                  <div className="flex flex-col gap-6 lg:gap-10 w-full lg:w-3/4 items-center lg:items-start justify-center lg:justify-start text-black">
+                    <p className="text-sm leading-relaxed">
+                      Were forward-thinking, highly experienced real estate
+                      agents representing premium properties in some of
+                      Melbournes finest inner-city neighbourhoods.
+                    </p>
+                    <p className="text-sm leading-relaxed">
+                      We navigate the property landscape and our local market
+                      with a level of assured ease and familiarity that’s only
+                      possible with years of experience and proven results.
+                    </p>
+                    <p className="text-sm leading-relaxed">
+                      What we do isn’t simply a job, it’s a lifestyle. For our
+                      clients, we’re always one step ahead, and over-delivery is
+                      our standard.
+                    </p>
+                    <p className="text-sm leading-relaxed">
+                      All for an experience and end result that goes beyond the
+                      expected.
+                    </p>
+                    {/* sharp button */}
+                    <button className="bg-black text-white px-4 py-2">
+                      Learn more
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <AboutPage />
-
+            <section className="bg-white text-black"></section>
+          </div>
           <Footer />
-        </Fragment>
+        </div>
       )}
     </div>
   );
