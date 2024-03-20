@@ -1,6 +1,7 @@
 "use client";
 
 import ImageSlider from "@/components/carousals/ImageSlider";
+import Footer from "@/components/common/footer";
 import { SectionLayout } from "@/components/layouts/SectionLayout";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
@@ -17,11 +18,11 @@ const ProjectPage = () => {
       if (window.scrollY > heroSectionHeight) {
         setIsTransparent(false);
         navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-gray-900"); // Change this to the desired background color
+        navbar.classList.add("bg-brand-primary"); // Change this to the desired background color
       } else {
         setIsTransparent(true);
         navbar.classList.add("bg-transparent");
-        navbar.classList.remove("bg-gray-900"); // Change this to the desired background color
+        navbar.classList.remove("bg-brand-primary"); // Change this to the desired background color
       }
     };
 
@@ -129,6 +130,7 @@ const ProjectPage = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

@@ -17,11 +17,11 @@ const AboutPage = () => {
       if (window.scrollY > heroSectionHeight) {
         setIsTransparent(false);
         navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-gray-900"); // Change this to the desired background color
+        navbar.classList.add("bg-brand-primary"); // Change this to the desired background color
       } else {
         setIsTransparent(true);
         navbar.classList.add("bg-transparent");
-        navbar.classList.remove("bg-gray-900"); // Change this to the desired background color
+        navbar.classList.remove("bg-brand-primary"); // Change this to the desired background color
       }
     };
 
@@ -117,7 +117,7 @@ const AboutPage = () => {
         ></motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-10  mx-auto items-center justify-center mt-28"
+          className="grid grid-cols-1 md:grid-cols-3 gap-10  mx-auto items-center justify-center my-28"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.6, staggerChildren: 0.2 }} // Stagger animation of children
@@ -144,6 +144,7 @@ const AboutPage = () => {
             omnis labor expedita harum ad."
           />
         </motion.div>
+
         <Footer />
       </div>
     </div>

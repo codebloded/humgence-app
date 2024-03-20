@@ -51,7 +51,7 @@ const Navbar: React.FC<{ isTransparent: boolean }> = ({ isTransparent }) => {
                 className="drawer-overlay"
               ></label>
 
-              <div className="flex flex-col w-full items-start justify-start h-full bg-primary-content">
+              <div className="flex flex-col w-full items-start justify-start h-full bg-neutral">
                 <div className="flex flex-col mt-4 w-full items-start justify-center">
                   <div className="flex flex-row items-start w-11/12 justify-between ">
                     <Link

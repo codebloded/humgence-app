@@ -17,7 +17,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ show, setShow }) => {
     >
       <Image
         alt="YOYO"
-        src="/1.jpg"
+        src="/d.jpg"
         //100% width and 100% height
         layout="fill"
         objectFit="cover"
@@ -31,7 +31,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ show, setShow }) => {
       {/* Content Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 h-full"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white">
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-brand-secondary">
         <h1 className="text-4xl font-bold">HUMGANCE</h1>
         <p className="mt-4 text-lg">REALITY</p>
       </div>

@@ -16,6 +16,7 @@ import {
   PlayIcon,
 } from "lucide-react";
 import ImageSlider from "@/components/carousals/ImageSlider";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [show, setShow] = useState<boolean>(true);
@@ -50,11 +51,11 @@ export default function Home() {
       if (window.scrollY > heroSectionHeight) {
         setIsTransparent(false);
         navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-gray-900"); // Change this to the desired background color
+        navbar.classList.add("bg-brand-primary"); // Change this to the desired background color
       } else {
         setIsTransparent(true);
         navbar.classList.add("bg-transparent");
-        navbar.classList.remove("bg-gray-900"); // Change this to the desired background color
+        navbar.classList.remove("bg-brand-primary"); // Change this to the desired background color
       }
     };
 
@@ -72,20 +73,29 @@ export default function Home() {
       ) : (
         <div>
           <Navbar isTransparent={isTransparent} />
-
-          <div id="hero-section" className="relative hero min-h-screen w-full">
-            <video
-              autoPlay
-              loop
-              muted
-              className="absolute inset-0 object-cover w-full h-full grayscale"
+          <motion.div
+            className="relative  w-full  flex justify-start md:justify-center items-center"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <div
+              id="hero-section"
+              className="relative hero min-h-screen w-full"
             >
-              <source src="video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="hero-overlay bg-black opacity-50"></div>
-            <div className="hero-content text-center"></div>
-          </div>
+              <video
+                autoPlay
+                loop
+                muted
+                className="absolute inset-0 object-cover w-full h-full grayscale"
+              >
+                <source src="video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="hero-overlay bg-black opacity-50"></div>
+              <div className="hero-content text-center"></div>
+            </div>
+          </motion.div>
 
           <div className="max-w-sm mx-auto flex flex-col items-center justify-center py-20 lg:max-w-screen-xl">
             <section className="bg-white text-black">
