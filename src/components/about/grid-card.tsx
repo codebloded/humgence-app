@@ -15,10 +15,16 @@ const GridCard: React.FC<GridCardProps> = ({ img, description, title }) => {
         width={500}
         height={500}
         alt="78"
-        className="object-cover"
+        className="object-cover aspect-video"
       />
 
-      <h3 className=" text-2xl md:text-3xl max-w-60 w-full text-[#222226]">
+      <div className="flex items-center gap-2">
+        <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
+        <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
+        <div className="w-3 h-3 bg-[#FFD700] rounded-full"></div>
+      </div>
+
+      <h3 className=" text-xl md:text-2xl max-w-60 w-full text-[#222226]">
         {title}
       </h3>
       <p className=" text-[#666361]">{description}</p>

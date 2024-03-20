@@ -5,11 +5,11 @@ import { WhiteButton } from "@/components/common/buttons";
 
 export default function ContactPage() {
   return (
-    <SectionLayout bgColor={{ type: "hex", value: "#222226" }}>
-      <div className="text-[#f3ede6] flex flex-col py-10 md:py-36 lg:py-44 items-start gap-20">
-        <p className="text-3xl md:text-6xl md:leading-[70px] lg:text-7xl lg:leading-[90px] xl:text-8xl xl:leading-[110px] font-semibold text-start">
+    <div className="bg-neutral">
+      <div className="max-w-sm mx-auto flex flex-col items-start justify-center p-10 lg:max-w-screen-xl bg-neutral h-screen">
+        <p className="text-4xl font-bold text-start mb-10 text-brand-secondary">
           Contact and{" "}
-          <span className="font-bolder-500 text-[#5656b1]">Connect</span>
+          <span className="font-bolder-500 text-brand-primary">Connect</span>
         </p>
 
         <div className="w-full flex flex-col justify-between gap-10 md:flex-row">
@@ -48,20 +48,20 @@ export default function ContactPage() {
 
           {/* Contact information */}
           <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-3">
-              <p>Contact</p>
+            <div className="flex flex-col gap-3 text-brand-secondary">
+              <p className="text-brand-primary">Contact</p>
               <p className="text-[#f]">(08) 9373 3999</p>
-              <p className="text-[#666361]">humgencesupport@mail.com</p>
+              <p className=" text-brand-secondary">humgencesupport@mail.com</p>
             </div>
             <div className="flex flex-col gap-3">
-              <p>Office</p>
+              <p className="text-brand-primary">Office</p>
               <p className="text-[#f3ede6]">
                 1234, 5th Avenue, New York, NY 10001, USA
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <p>Social</p>
-              <div className="flex flex-col gap-1">
+              <p className="text-brand-primary">Social</p>
+              <div className="flex flex-col gap-1 text-brand-secondary">
                 <p className="text-[#f3ede6]">Facebook</p>
                 <p className="text-[#f3ede6]">Twitter</p>
                 <p className="text-[#f3ede6]">LinkedIn</p>
@@ -70,6 +70,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </SectionLayout>
+    </div>
   );
 }

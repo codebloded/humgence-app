@@ -1,10 +1,11 @@
 "use client";
-import Navbar from "@/components/navbar";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import GridCard from "@/components/about/grid-card";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import Footer from "@/components/common/footer";
+import GridCard from "@/components/about/grid-card";
+import Navbar from "@/components/navbar";
+
 const AboutPage = () => {
   const [isTransparent, setIsTransparent] = useState<boolean>(true);
 
@@ -31,6 +32,7 @@ const AboutPage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div>
       <Navbar isTransparent={isTransparent} />
@@ -49,6 +51,7 @@ const AboutPage = () => {
           </h1>
         </div>
       </div>
+
       <motion.div
         className="w-full max-w-4xl mx-auto border-t border-gray-900"
         initial={{ opacity: 0, y: -50 }}
@@ -56,68 +59,32 @@ const AboutPage = () => {
         transition={{ duration: 1, delay: 0.8 }}
       ></motion.div>
 
-      <div className="max-w-sm mx-auto flex flex-col my-10 items-start justify-center p-10 lg:max-w-screen-xl">
-        <motion.div
-          className="w-full flex flex-col items-center md:flex-row item-center justify-center gap-10 my-10"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <p className="text-xs sm:text-sm md:text-md w-full md:w-[50%]">
-            {/* <span className=" text-3xl lg:text-5xl font-bold my-10 md:text-3xl max-w-60 w-full text-[#222226]">
-              About US
-            </span> */}
-            Embark on the journey to your ideal living space with our exclusive
-            real estate offerings. From urban retreats to countryside estates,
-            unlock the door to your dream home today. Explore listings, schedule
-            a viewing, and speak to our experts to turn your vision into
-            reality.
-          </p>
-          <div className="w-full md:w-[50%]">
-            <Image
-              src="/11.jpg"
-              width={500}
-              height={500}
-              alt="78"
-              className="object-cover"
-            />
-          </div>
-        </motion.div>
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-10  mx-auto items-center justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.6, staggerChildren: 0.2 }} // Stagger animation of children
+      >
+        <div className="w-full">
+          <Image
+            src="/3.jpg"
+            width={500}
+            height={500}
+            alt="78"
+            className="object-cover"
+          />
+        </div>
+        <p className="text-sm sm:text-base md:text-lg text-center">
+          Embark on the journey to your ideal living space with our exclusive
+          real estate offerings. From urban retreats to countryside estates,
+          unlock the door to your dream home today. Explore listings, schedule a
+          viewing, and speak to our experts to turn your vision into reality.
+        </p>
+      </motion.div>
 
-        {/* Second content section with animation */}
+      <div className="max-w-sm mx-auto flex flex-col items-start justify-center p-10 lg:max-w-screen-xl  h-screen">
         <motion.div
-          className="w-full flex flex-col-reverse items-center md:flex-row item-center justify-center gap-10 my-10"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <div className="w-full md:w-[50%]">
-            <Image
-              src="/3.jpg"
-              width={500}
-              height={500}
-              alt="78"
-              className="object-cover"
-            />
-          </div>
-          <p className="text-xs sm:text-sm md:text-md w-full md:w-[50%]">
-            Embark on the journey to your ideal living space with our exclusive
-            real estate offerings. From urban retreats to countryside estates,
-            unlock the door to your dream home today. Explore listings, schedule
-            a viewing, and speak to our experts to turn your vision into
-            reality.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="w-full  lg:mt-36 border-t border-gray-900"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        ></motion.div>
-
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-10  mx-auto items-center justify-center mt-28"
+          className="grid grid-cols-1 md:grid-cols-3 gap-10  mx-auto items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.6, staggerChildren: 0.2 }} // Stagger animation of children

@@ -1,5 +1,7 @@
 "use client";
 
+import { IconButton } from "@chakra-ui/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 interface CarouselProps {
@@ -21,7 +23,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden mx-auto max-w-2xl">
+      <div className="overflow-hidden mx-auto relative ">
         <div
           className={`flex transition ease-out duration-400`}
           style={{
@@ -33,21 +35,27 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
               key={index}
               src={s}
               alt={`Slide ${index}`}
-              className="w-full h-auto object-cover"
+              className="w-full aspect-video object-cover"
             />
           ))}
         </div>
 
-        <div className="relative bottom-4 md:bottom-8 w-full flex justify-center gap-4 px-4 md:px-10 text-white">
+        <div className="absolute inset-y-0 flex justify-between w-full px-4 md:px-10 text-white">
           <button onClick={previousSlide} className="flex-shrink-0">
-            Prev
+            <ChevronLeft
+              size={54}
+              className="bg-gray-900 opacity-70 rounded-full p-2"
+            />
           </button>
           <button onClick={nextSlide} className="flex-shrink-0">
-            Next
+            <ChevronRight
+              size={54}
+              className="bg-gray-900 opacity-70 rounded-full p-2"
+            />
           </button>
         </div>
 
-        <div className="relative bottom-2 md:bottom-8 w-full flex justify-center gap-2 p-2 md:p-4">
+        <div className="absolute bottom-2 md:bottom-8 w-full flex justify-center gap-2 p-2 md:p-4">
           {slides.map((_, index) => (
             <div
               key={index}
@@ -58,6 +66,13 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
             ></div>
           ))}
         </div>
+      </div>
+      <div className="flex flex-row lg:flex-row gap-10 items-start justify-between md:justify-between p-10">
+        <h3 className="text-sm font-light text-center mb-4 md:mb-0">
+          Apartment
+        </h3>
+
+        <h3 className="text-sm font-light text-center mb-4 md:mb-0">3 Beds</h3>
       </div>
     </div>
   );
