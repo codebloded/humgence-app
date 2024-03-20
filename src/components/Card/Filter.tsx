@@ -190,7 +190,7 @@ const Filter = ({ filter, setFilter }: Props) => {
                 primary: "white",
               },
             })}
-            onChange={(e) =>
+            onChange={(e: OptionsOrGroups<any, any>) =>
               setFilter({
                 ...filter,
                 propertyType: e.map((option) => option.value),
@@ -215,7 +215,7 @@ const Filter = ({ filter, setFilter }: Props) => {
                 primary: "white",
               },
             })}
-            onChange={(e) =>
+            onChange={(e: OptionsOrGroups<any, any>) =>
               setFilter({
                 ...filter,
                 propertyStatus: e.map((option) => option.value),
@@ -245,7 +245,7 @@ const Filter = ({ filter, setFilter }: Props) => {
                         primary: "white",
                       },
                     })}
-                    onChange={(e) =>
+                    onChange={(e: OptionsOrGroups<any, any>) =>
                       setFilter({
                         ...filter,
                         propertySize: e.map((option) => option.value),
@@ -274,7 +274,7 @@ const Filter = ({ filter, setFilter }: Props) => {
                     onChange={(e) =>
                       setFilter({
                         ...filter,
-                        broker: e!.value,
+                        broker: (e as any).value,
                       })
                     }
                   />
