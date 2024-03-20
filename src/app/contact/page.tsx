@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar";
 export default function ContactPage() {
   return (
     <div className="bg-brand-secondary">
-      <div className="max-w-sm mx-auto flex flex-col items-start justify-center p-10 lg:max-w-screen-xl bg-brand-secondary h-screen">
+      <div className=" mx-auto flex flex-col items-start justify-center p-10 lg:max-w-screen-xl bg-brand-secondary">
         <p className="text-4xl font-bold text-start mb-10 text-brand-secondary">
           Contact and{" "}
           <span className="font-bolder-500 text-brand-primary">Connect</span>
@@ -60,7 +60,7 @@ export default function ContactPage() {
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3 text-brand-secondary">
               <p className="text-brand-primary">Contact</p>
-              <p className="text-[#f]">(08) 9373 3999</p>
+              <p className="text-brand-primary">(08) 9373 3999</p>
               <p className=" text-brand-primary">humgencesupport@mail.com</p>
             </div>
             <div className="flex flex-col gap-3">

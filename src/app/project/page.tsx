@@ -54,8 +54,8 @@ const ProjectPage = () => {
         </div>
 
         <div className="max-w-sm mx-auto flex flex-col items-center justify-center my-24 lg:max-w-screen-xl">
-          <div className="flex flex-col items-center gap-10 justify-between lg:flex-row lg:items-center lg:justify-center">
-            <div className="lg:w-2/4 lg:ml-10 text-start lg:text-start">
+          <div className="flex flex-col-reverse items-center gap-10 justify-between m-5 lg:flex-row lg:items-center lg:justify-center">
+            <div className="lg:w-2/4 lg:ml-10 text-center lg:text-start">
               <h2 className="text-xl font-light mb-4 lg:mb-8">
                 Beyond that expected
               </h2>

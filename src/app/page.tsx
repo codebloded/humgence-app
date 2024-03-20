@@ -99,19 +99,19 @@ export default function Home() {
 
           <div className="max-w-sm mx-auto flex flex-col items-center justify-center py-20 lg:max-w-screen-xl">
             <section className="bg-white text-black">
-              <div className=" py-10 px-4 flex flex-col items-center gap-10 justify-between lg:flex-row lg:items-center lg:justify-center">
-                <div className="lg:w-2/5 lg:mr-10">
+              <div className=" py-10 px-4 flex flex-col items-center gap-20 justify-between lg:flex-row lg:items-center lg:justify-center">
+                <div className="lg:w-3/5 ">
                   <Image
                     src="/land.jpg"
                     //rectangle image
-                    width={250}
+                    width={800}
                     height={550}
                     alt="about"
-                    className=" aspect-square w-full filter grayscale "
+                    className=" aspect-auto w-full filter grayscale "
                   />
                 </div>
-                <div className="lg:w-1/3 lg:ml-10 text-start lg:text-start">
-                  <h2 className="text-xl font-light mb-4 lg:mb-8">
+                <div className="lg:w-2/5  text-start lg:text-start">
+                  <h2 className="text-xl font-light mb-4 ">
                     Beyond that expected
                   </h2>
                   {/* divide the a big paragraph into three lines */}
@@ -144,7 +144,7 @@ export default function Home() {
               </div>
             </section>
             <section className="bg-white text-black my-20">
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-10 m-5">
                 <div className="flex justify-between items-center">
                   <h1 className="text-xl font-light text-start">
                     Featured Properties
