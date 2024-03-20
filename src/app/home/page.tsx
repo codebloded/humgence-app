@@ -2,11 +2,11 @@ import { ThreeDCardDemo } from "@/components/Card";
 import React from "react";
 
 const page = () => {
-	return (
-		<div className="container mx-auto flex flex-wrap justify-center gap-4">
-			<ThreeDCardDemo />
-		</div>
-	);
+  return (
+    <div className="container mx-auto flex flex-wrap justify-center gap-4">
+      <h1 className="text-4xl font-bold text-center">Property</h1>
+    </div>
+  );
 };
 export default page;
 // "use client";
