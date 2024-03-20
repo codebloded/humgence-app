@@ -76,13 +76,13 @@ const Navbar: React.FC<{ isTransparent: boolean }> = ({ isTransparent }) => {
                       <a>Team and connect</a>
                     </li>
                     <li>
-                      <a>Our Projects</a>
+                      <Link href="/project"> Our Projects</Link>
                     </li>
                     <li>
-                      <a>About Us</a>
+                      <Link href="/about">About Us</Link>
                     </li>
                     <li>
-                      <a>Contact</a>
+                      <Link href="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>
